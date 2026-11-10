@@ -1,5 +1,8 @@
+import { About } from "@/components/organisms/About";
+import { Experience } from "@/components/organisms/Experience";
 import { Hero } from "@/components/organisms/Hero";
 import { Navbar } from "@/components/organisms/Navbar";
+import { StatsStrip } from "@/components/organisms/StatsStrip";
 import { getDictionary, getLocale } from "@/content/get-dictionary";
 
 export default async function Home() {
@@ -14,6 +17,9 @@ export default async function Home() {
       />
       <main className="flex-1">
         <Hero content={dictionary.hero} terminal={dictionary.terminal} />
+        <StatsStrip stats={dictionary.stats} />
+        <About content={dictionary.about} />
+        <Experience content={dictionary.experience} />
       </main>
     </>
   );
