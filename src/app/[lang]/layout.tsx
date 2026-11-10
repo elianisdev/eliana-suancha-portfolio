@@ -42,7 +42,7 @@ export default async function RootLayout({ children }: LayoutProps<"/[lang]">) {
   return (
     <html
       lang={locale}
-      className={`${plusJakartaSans.variable} ${inter.variable} ${jetBrainsMono.variable} h-full scroll-smooth scheme-dark antialiased`}
+      className={`${plusJakartaSans.variable} ${inter.variable} ${jetBrainsMono.variable} h-full scroll-pt-16 scroll-smooth scheme-dark antialiased motion-reduce:scroll-auto`}
     >
       <body className="min-h-full flex flex-col bg-ink font-sans text-fg">
         {children}
