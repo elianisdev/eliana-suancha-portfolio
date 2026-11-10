@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono, Plus_Jakarta_Sans } from "next/font/google";
-import "./globals.css";
+import { getDictionary, getLocale } from "@/content/get-dictionary";
+import { locales } from "@/lib/i18n";
+import "../globals.css";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   variable: "--font-plus-jakarta-sans",
@@ -18,16 +20,28 @@ const jetBrainsMono = JetBrains_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "Eliana Suancha · Frontend Developer",
-  description:
-    "Frontend Developer Semi Senior. React, Next.js y TypeScript con foco en accesibilidad y rendimiento.",
-};
+export async function generateStaticParams() {
+  return locales.map((lang) => ({ lang }));
+}
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export async function generateMetadata(): Promise<Metadata> {
+  const { metadata } = await getDictionary();
+
+  return {
+    title: metadata.title,
+    description: metadata.description,
+    alternates: {
+      languages: Object.fromEntries(locales.map((locale) => [locale, `/${locale}`])),
+    },
+  };
+}
+
+export default async function RootLayout({ children }: LayoutProps<"/[lang]">) {
+  const locale = await getLocale();
+
   return (
     <html
-      lang="es"
+      lang={locale}
       className={`${plusJakartaSans.variable} ${inter.variable} ${jetBrainsMono.variable} h-full scroll-smooth scheme-dark antialiased`}
     >
       <body className="min-h-full flex flex-col bg-ink font-sans text-fg">
