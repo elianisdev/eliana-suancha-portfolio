@@ -124,6 +124,7 @@ export const en: Dictionary = {
     title: "Eliana Suancha · Frontend Developer",
     description:
       "Semi Senior Frontend Developer. React, Next.js and TypeScript with a focus on accessibility and performance.",
+    imageAlt: "Eliana Suancha Guzmán, Frontend Developer. React, Next.js, TypeScript, Clean Architecture and accessibility.",
   },
   languageSwitcher: {
     label: "Change language",

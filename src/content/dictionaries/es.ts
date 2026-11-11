@@ -126,6 +126,7 @@ export const es = {
     title: "Eliana Suancha · Frontend Developer",
     description:
       "Frontend Developer Semi Senior. React, Next.js y TypeScript con foco en accesibilidad y rendimiento.",
+    imageAlt: "Eliana Suancha Guzmán, Frontend Developer. React, Next.js, TypeScript, Clean Architecture y accesibilidad.",
   },
   languageSwitcher: {
     label: "Cambiar idioma",

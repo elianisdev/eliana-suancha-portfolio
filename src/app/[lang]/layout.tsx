@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono, Plus_Jakarta_Sans } from "next/font/google";
 import { getDictionary, getLocale } from "@/content/get-dictionary";
-import { locales } from "@/lib/i18n";
+import { fullName } from "@/content/profile";
+import { locales, type Locale } from "@/lib/i18n";
 import "../globals.css";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
@@ -24,14 +25,27 @@ export async function generateStaticParams() {
   return locales.map((lang) => ({ lang }));
 }
 
+const openGraphLocales: Record<Locale, string> = {
+  es: "es_CO",
+  en: "en_US",
+};
+
 export async function generateMetadata(): Promise<Metadata> {
-  const { metadata } = await getDictionary();
+  const [locale, { metadata }] = await Promise.all([getLocale(), getDictionary()]);
 
   return {
     title: metadata.title,
     description: metadata.description,
+    openGraph: {
+      type: "website",
+      title: metadata.title,
+      description: metadata.description,
+      siteName: fullName,
+      locale: openGraphLocales[locale],
+      images: [{ url: "/og-image.png", width: 1200, height: 630, alt: metadata.imageAlt }],
+    },
     alternates: {
-      languages: Object.fromEntries(locales.map((locale) => [locale, `/${locale}`])),
+      languages: Object.fromEntries(locales.map((lang) => [lang, `/${lang}`])),
     },
   };
 }
