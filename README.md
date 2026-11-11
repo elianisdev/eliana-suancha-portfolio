@@ -1,36 +1,81 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Eliana Suancha Guzmán · Portfolio
 
-## Getting Started
+Personal portfolio of a Semi Senior Frontend Developer. A bilingual (Spanish / English) one-page site that presents my experience, selected projects and the way I build software.
 
-First, run the development server:
+![Portfolio preview](public/og-image.png)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Highlights
+
+- **Interactive terminal** in the hero: visitors can type commands like `whoami`, `stack` or `contact`.
+- **Bilingual routing** with `/es` and `/en`, statically generated, plus automatic language detection from the browser.
+- **Accessible by design:** semantic HTML, keyboard navigation, visible focus states, WCAG AA color contrast and `prefers-reduced-motion` support.
+- **Performance:** static rendering, optimized images with `next/image` and self-hosted fonts with `next/font`.
+- **Type-safe translations:** every dictionary is typed against the Spanish one, so the build fails if a translation is missing.
+
+## Tech stack
+
+| Area | Technology |
+|---|---|
+| Framework | Next.js 16 (App Router), React 19 |
+| Language | TypeScript (strict) |
+| Styling | Tailwind CSS 4 with design tokens in `@theme` |
+| Animation | Motion |
+| Quality | ESLint, TypeScript type checking |
+| CI | GitHub Actions |
+
+## Architecture
+
+The UI follows **Atomic Design**, and content is kept separate from components:
+
+```
+src/
+├── app/[lang]/        # Routes, root layout and metadata per locale
+├── components/
+│   ├── atoms/         # Smallest building blocks: Tag, ButtonLink, StatusPill…
+│   ├── molecules/     # Combinations of atoms: ProjectCard, SectionHeader…
+│   └── organisms/     # Page sections: Hero, Projects, Contact…
+├── content/           # Profile data, projects, experience and typed dictionaries
+├── hooks/             # Client-side behavior: terminal, pointer glow, dot grid
+├── lib/               # i18n helpers and formatting utilities
+├── types/             # Shared domain types
+└── proxy.ts           # Redirects to the preferred locale
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Components receive already translated content as props, so they stay free of language logic and easy to reuse.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Getting started
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Requirements: Node.js 20.9 or later.
 
-## Learn More
+```bash
+npm install
+npm run dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+Open [http://localhost:3000](http://localhost:3000). You will be redirected to `/es` or `/en` depending on your browser language.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Scripts
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+| Command | Description |
+|---|---|
+| `npm run dev` | Start the development server |
+| `npm run build` | Create a production build |
+| `npm run start` | Serve the production build |
+| `npm run lint` | Run ESLint |
+| `npm run typecheck` | Generate Next.js route types and run the TypeScript compiler |
 
-## Deploy on Vercel
+## Workflow
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Development follows **GitHub Flow**:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Every change starts as an issue.
+2. Work happens on a short-lived branch (`feat/…`, `chore/…`, `ci/…`).
+3. A pull request closes the issue and is merged with **squash and merge**.
+
+The `main` branch is protected by a ruleset: changes require a pull request, and the **CI workflow** (lint, type check and build) must pass before merging.
+
+## Contact
+
+- Email: [elianitasuanguz@gmail.com](mailto:elianitasuanguz@gmail.com)
+- LinkedIn: [linkedin.com/in/elianaguz](https://www.linkedin.com/in/elianaguz)
+- GitHub: [github.com/elianisdev](https://github.com/elianisdev)
