@@ -123,7 +123,7 @@ export const en: Dictionary = {
     titleHighlight: "the next developer in mind.",
     description:
       "I like to understand the problem before writing a line: defining the architecture, caring about interface details and leaving code the team can read, test and improve.",
-    location: "Colombia · remote or hybrid",
+    location: "Colombia · remote",
     photoAlt: "Portrait of Eliana Suancha Guzmán",
     steps: [
       {
@@ -266,5 +266,15 @@ export const en: Dictionary = {
       { degree: "Software Engineering", detail: "Universidad Manuela Beltrán · in progress" },
       { degree: "Environmental Engineering", detail: "Universidad ECCI · 2015 – 2020" },
     ],
+  },
+  contact: {
+    eyebrow: "Contact",
+    title: "Looking for someone for your team or project?",
+    description:
+      "I'm open to remote frontend roles and freelance projects. Write to me and let's talk.",
+    downloadCv: "Download CV",
+  },
+  footer: {
+    builtWith: "Built with Next.js + Tailwind",
   },
 };

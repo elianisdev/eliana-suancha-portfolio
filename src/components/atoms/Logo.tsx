@@ -1,3 +1,5 @@
+import { fullName } from "@/content/profile";
+
 type LogoProps = {
   href: string;
 };
@@ -14,7 +16,7 @@ export function Logo({ href }: LogoProps) {
       >
         ESG
       </span>
-      <span className="sr-only sm:not-sr-only">Eliana Suancha Guzmán</span>
+      <span className="sr-only sm:not-sr-only">{fullName}</span>
     </a>
   );
 }
