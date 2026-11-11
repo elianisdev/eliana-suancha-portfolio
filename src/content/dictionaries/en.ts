@@ -204,4 +204,67 @@ export const en: Dictionary = {
     },
     items: enProjectItems,
   },
+  howIBuild: {
+    eyebrow: "How I build",
+    title: "Architecture before components",
+    description:
+      "Two patterns I use in production: Clean Architecture to organize data and logic, and Atomic Design to build the interface.",
+    patterns: {
+      cleanArchitecture: {
+        eyebrow: "Data and logic",
+        title: "Clean Architecture",
+        description:
+          "I separate business logic from the interface: if the API or the design changes, one side adjusts without breaking the other.",
+        layers: [
+          { name: "REST API", detail: "typed contract" },
+          { name: "Service", detail: "HTTP calls" },
+          { name: "Use Case", detail: "business rule" },
+          { name: "Mapper", detail: "response → props" },
+          { name: "UI", detail: "React component" },
+        ],
+      },
+      atomicDesign: {
+        eyebrow: "Interface",
+        title: "Atomic Design",
+        description:
+          "I build the interface from small reusable pieces up to full pages, so everything stays consistent and easy to maintain.",
+        layers: [
+          { name: "Atoms", detail: "button · input · icon" },
+          { name: "Molecules", detail: "search field" },
+          { name: "Organisms", detail: "header · project card" },
+          { name: "Templates", detail: "dashboard layout" },
+          { name: "Pages", detail: "dashboard with real data" },
+        ],
+      },
+    },
+    skillGroups: {
+      core: "Core",
+      stateAndData: "State and data",
+      architecture: "Architecture",
+      quality: "Quality and performance",
+      ai: "AI in development",
+      alsoWith: "I also work with",
+    },
+  },
+  certifications: {
+    eyebrow: "Learning",
+    title: "Certifications",
+    description:
+      "Six selected credentials: frontend, the professional GitHub workflow and AI-assisted development.",
+    viewCredential: "See credential ↗",
+    moreCourses: "+20 more courses on LinkedIn ↗",
+    educationTitle: "Education",
+    items: {
+      frontendReact: "React, Tailwind CSS and frontend development",
+      reactTypeScript: "Typed components with TypeScript and Material UI",
+      githubFoundations: "Official certification · Credly",
+      githubActions: "CI/CD and workflow automation",
+      claudeCode: "Agent-assisted development: CLAUDE.md, skills, subagents and MCP",
+      mcpAdvanced: "MCP clients and servers, STDIO and HTTP transports",
+    },
+    education: [
+      { degree: "Software Engineering", detail: "Universidad Manuela Beltrán · in progress" },
+      { degree: "Environmental Engineering", detail: "Universidad ECCI · 2015 – 2020" },
+    ],
+  },
 };

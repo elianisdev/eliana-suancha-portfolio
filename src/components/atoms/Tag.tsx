@@ -14,7 +14,7 @@ const toneClassNames: Record<TagTone, string> = {
 
 export function Tag({ children, tone = "accent" }: TagProps) {
   return (
-    <span className={`rounded-md px-2 py-1 font-mono text-xs ${toneClassNames[tone]}`}>
+    <span className={`inline-block rounded-md px-2 py-1 font-mono text-xs ${toneClassNames[tone]}`}>
       {children}
     </span>
   );

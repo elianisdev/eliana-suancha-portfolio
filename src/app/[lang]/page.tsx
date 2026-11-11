@@ -1,6 +1,8 @@
 import { About } from "@/components/organisms/About";
+import { Certifications } from "@/components/organisms/Certifications";
 import { Experience } from "@/components/organisms/Experience";
 import { Hero } from "@/components/organisms/Hero";
+import { HowIBuild } from "@/components/organisms/HowIBuild";
 import { Navbar } from "@/components/organisms/Navbar";
 import { Projects } from "@/components/organisms/Projects";
 import { StatsStrip } from "@/components/organisms/StatsStrip";
@@ -22,6 +24,8 @@ export default async function Home() {
         <About content={dictionary.about} />
         <Experience content={dictionary.experience} />
         <Projects content={dictionary.projects} />
+        <HowIBuild content={dictionary.howIBuild} />
+        <Certifications content={dictionary.certifications} locale={locale} />
       </main>
     </>
   );

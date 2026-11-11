@@ -10,5 +10,6 @@ export const sectionIds = {
   experience: "experience",
   projects: "projects",
   architecture: "architecture",
+  certifications: "certifications",
   contact: "contact",
 };

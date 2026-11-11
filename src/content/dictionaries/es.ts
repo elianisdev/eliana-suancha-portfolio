@@ -1,4 +1,6 @@
 import { esTerminal } from "@/content/terminal/es";
+import type { ArchitecturePatternId, ArchitecturePatternTranslation, SkillGroupId } from "@/types/architecture";
+import type { CertificationId } from "@/types/certification";
 import type { ExperienceId, ExperienceTranslation } from "@/types/experience";
 import type { ProjectId, ProjectTranslation } from "@/types/project";
 
@@ -203,5 +205,68 @@ export const es = {
       quality: "Calidad",
     },
     items: esProjectItems,
+  },
+  howIBuild: {
+    eyebrow: "Cómo construyo",
+    title: "Arquitectura antes que componentes",
+    description:
+      "Dos patrones que aplico en producción: Clean Architecture para organizar los datos y la lógica, y Atomic Design para construir la interfaz.",
+    patterns: {
+      cleanArchitecture: {
+        eyebrow: "Datos y lógica",
+        title: "Clean Architecture",
+        description:
+          "Separo la lógica de negocio de la interfaz: si cambia la API o el diseño, una parte se ajusta sin romper la otra.",
+        layers: [
+          { name: "API REST", detail: "contrato tipado" },
+          { name: "Service", detail: "llamadas HTTP" },
+          { name: "Use Case", detail: "regla de negocio" },
+          { name: "Mapper", detail: "respuesta → props" },
+          { name: "UI", detail: "componente React" },
+        ],
+      },
+      atomicDesign: {
+        eyebrow: "Interfaz",
+        title: "Atomic Design",
+        description:
+          "Construyo la interfaz desde piezas pequeñas y reutilizables hasta páginas completas, así todo se ve consistente y se mantiene fácil.",
+        layers: [
+          { name: "Átomos", detail: "botón · input · ícono" },
+          { name: "Moléculas", detail: "campo de búsqueda" },
+          { name: "Organismos", detail: "header · tarjeta de proyecto" },
+          { name: "Templates", detail: "layout del dashboard" },
+          { name: "Páginas", detail: "dashboard con datos reales" },
+        ],
+      },
+    } satisfies Record<ArchitecturePatternId, ArchitecturePatternTranslation>,
+    skillGroups: {
+      core: "Principal",
+      stateAndData: "Estado y datos",
+      architecture: "Arquitectura",
+      quality: "Calidad y rendimiento",
+      ai: "IA en el desarrollo",
+      alsoWith: "También trabajo con",
+    } satisfies Record<SkillGroupId, string>,
+  },
+  certifications: {
+    eyebrow: "Formación",
+    title: "Certificaciones",
+    description:
+      "Seis credenciales elegidas: frontend, el flujo profesional con GitHub y desarrollo asistido por IA.",
+    viewCredential: "Ver credencial ↗",
+    moreCourses: "+20 cursos más en LinkedIn ↗",
+    educationTitle: "Educación",
+    items: {
+      frontendReact: "React, Tailwind CSS y desarrollo frontend",
+      reactTypeScript: "Componentes tipados con TypeScript y Material UI",
+      githubFoundations: "Certificación oficial · Credly",
+      githubActions: "CI/CD y automatización de flujos",
+      claudeCode: "Desarrollo con agentes: CLAUDE.md, skills, subagentes y MCP",
+      mcpAdvanced: "Clientes y servidores MCP, transportes STDIO y HTTP",
+    } satisfies Record<CertificationId, string>,
+    education: [
+      { degree: "Ingeniería de Software", detail: "Universidad Manuela Beltrán · en curso" },
+      { degree: "Ingeniería Ambiental", detail: "Universidad ECCI · 2015 – 2020" },
+    ],
   },
 };
