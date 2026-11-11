@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import { Inter, JetBrains_Mono, Plus_Jakarta_Sans } from "next/font/google";
 import { getDictionary, getLocale } from "@/content/get-dictionary";
 import { fullName, siteUrl } from "@/content/profile";
@@ -66,6 +67,7 @@ export default async function RootLayout({ children }: LayoutProps<"/[lang]">) {
     >
       <body className="min-h-full flex flex-col bg-ink font-sans text-fg">
         {children}
+        <Analytics />
       </body>
     </html>
   );
