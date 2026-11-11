@@ -8,6 +8,7 @@ type ButtonLinkProps = {
   children: ReactNode;
   variant?: ButtonLinkVariant;
   external?: boolean;
+  download?: boolean;
 };
 
 const baseClassName =
@@ -23,8 +24,17 @@ export function ButtonLink({
   children,
   variant = "secondary",
   external = false,
+  download = false,
 }: ButtonLinkProps) {
   const className = `${baseClassName} ${variantClassNames[variant]}`;
+
+  if (download) {
+    return (
+      <a href={href} download className={className}>
+        {children}
+      </a>
+    );
+  }
 
   if (external) {
     return (

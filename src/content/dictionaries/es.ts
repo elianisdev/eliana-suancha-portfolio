@@ -125,7 +125,7 @@ export const es = {
     titleHighlight: "quien mantiene el código después.",
     description:
       "Me gusta entender el problema antes de escribir una línea: definir la arquitectura, cuidar los detalles de la interfaz y dejar código que el equipo pueda leer, probar y mejorar.",
-    location: "Colombia · remoto o híbrido",
+    location: "Colombia · remoto",
     photoAlt: "Retrato de Eliana Suancha Guzmán",
     steps: [
       {
@@ -268,5 +268,15 @@ export const es = {
       { degree: "Ingeniería de Software", detail: "Universidad Manuela Beltrán · en curso" },
       { degree: "Ingeniería Ambiental", detail: "Universidad ECCI · 2015 – 2020" },
     ],
+  },
+  contact: {
+    eyebrow: "Contacto",
+    title: "¿Buscas a alguien para tu equipo o tu proyecto?",
+    description:
+      "Estoy abierta a posiciones frontend remotas y a proyectos freelance. Escríbeme y conversemos.",
+    downloadCv: "Descargar CV",
+  },
+  footer: {
+    builtWith: "Hecho con Next.js + Tailwind",
   },
 };

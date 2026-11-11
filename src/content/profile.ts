@@ -1,7 +1,10 @@
+export const fullName = "Eliana Suancha Guzmán";
+
 export const profileLinks = {
   email: "elianitasuanguz@gmail.com",
   linkedin: "https://www.linkedin.com/in/elianaguz",
   github: "https://github.com/elianisdev",
+  cv: "/CV-Eliana-Suancha-Frontend-Developer.pdf",
 };
 
 export const sectionIds = {
