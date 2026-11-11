@@ -2,12 +2,31 @@ import type { Certification } from "@/types/certification";
 
 export const certifications: Certification[] = [
   {
+    id: "githubFoundations",
+    title: "GitHub Foundations",
+    issuer: "GitHub",
+    issuerInitials: "GH",
+    issuedAt: "2025-06",
+    area: "development",
+    credentialUrl: "https://www.credly.com/badges/8377041a-33dc-4f6b-8466-44c0fb01b2fe/public_url",
+  },
+  {
+    id: "githubActions",
+    title: "GitHub Actions",
+    issuer: "GitHub",
+    issuerInitials: "GH",
+    issuedAt: "2025-06",
+    area: "development",
+    credentialUrl: "https://www.credly.com/badges/817768c8-6e89-4e6f-a5a8-7340bd244063/public_url",
+  },
+  {
     id: "frontendReact",
     title: "Frontend con ReactJS",
     issuer: "ACM · Universidad Distrital",
     issuerInitials: "UD",
     issuedAt: "2026-06",
     area: "development",
+    credentialUrl: "https://thoth.acmud.org/certificates/ad8c9022-31a2-45c1-b75c-0fc31785ed09",
   },
   {
     id: "reactTypeScript",
@@ -18,28 +37,13 @@ export const certifications: Certification[] = [
     area: "development",
   },
   {
-    id: "githubFoundations",
-    title: "GitHub Foundations",
-    issuer: "GitHub",
-    issuerInitials: "GH",
-    issuedAt: "2025-06",
-    area: "development",
-  },
-  {
-    id: "githubActions",
-    title: "GitHub Actions",
-    issuer: "GitHub",
-    issuerInitials: "GH",
-    issuedAt: "2025-06",
-    area: "development",
-  },
-  {
     id: "claudeCode",
     title: "Claude Code 101",
     issuer: "Anthropic",
     issuerInitials: "A\\",
     issuedAt: "2026-10",
     area: "ai",
+    credentialUrl: "https://academy.claude.com/verify/64813981d597e06a1ef3d106d2ae939a",
   },
   {
     id: "mcpAdvanced",
@@ -48,5 +52,6 @@ export const certifications: Certification[] = [
     issuerInitials: "DC",
     issuedAt: "2026-11",
     area: "ai",
+    credentialUrl: "https://www.datacamp.com/completed/statement-of-accomplishment/course/9e97ff9cebd89b2c0aa55e254b709576820c4ad8",
   },
 ];
