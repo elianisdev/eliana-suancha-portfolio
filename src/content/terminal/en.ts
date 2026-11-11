@@ -52,7 +52,8 @@ export const enTerminal: TerminalContent = {
     ],
     projects: [
       [{ text: "Datta ATS · Konfex · Identity verification" }],
-      [{ text: "YouCreate · G20 HealthTech · Banco Saint Patrick" }],
+      [{ text: "YouCreate · G20 HealthTech · Biotasys" }],
+      [{ text: "Kitchen Recipes" }],
       [
         { text: "DevFlow AI ", tone: "secondary" },
         { text: "(in progress)", tone: "comment" },

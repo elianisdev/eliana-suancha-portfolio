@@ -1,5 +1,90 @@
 import { enTerminal } from "@/content/terminal/en";
 import type { Dictionary } from "@/types/dictionary";
+import type { ProjectId, ProjectTranslation } from "@/types/project";
+
+const enProjectItems: Record<ProjectId, ProjectTranslation> = {
+  datta: {
+    title: "ATS and marketing site · Datta",
+    tags: [
+      { label: "Professional work", tone: "accent" },
+      { label: "Private code", tone: "secondary" },
+    ],
+    description:
+      "Recruiting platform for companies, recruiters and candidates. In the ATS I built 5 complete modules: hiring, emails and templates, automated actions and the freelance recruiter panel. I built the marketing site's landing from start to finish.",
+    architecture: "Layered Clean Architecture · Service → Use Case → Mapper",
+    highlights: [
+      "Full landing with Next.js: product pages, cal.com scheduling and lead capture.",
+      "Email composer with dynamic variables and reusable templates.",
+      "Gmail integration with Google OAuth.",
+      "Design system component adopted by 19 existing components.",
+    ],
+  },
+  konfex: {
+    title: "Konfex",
+    tags: [
+      { label: "Team of 8", tone: "secondary" },
+      { label: "Real client", tone: "accent" },
+    ],
+    description:
+      "Management for a clothing workshop: orders, costs, quotes and customer chat over Telegram.",
+    architecture:
+      "Monorepo · Next.js frontend + Node API with Prisma · real time with Socket.io",
+    role: "I redesigned the cost calculator from Figma and wired the chat's read / unread state.",
+  },
+  identity: {
+    title: "Identity verification",
+    tags: [
+      { label: "Solo", tone: "accent" },
+      { label: "Live demo", tone: "secondary" },
+    ],
+    description:
+      "Live capture of an ID card and a selfie in the browser, with an instant verdict.",
+    architecture: "Pages · components · hooks · services",
+  },
+  youCreate: {
+    title: "YouCreate",
+    tags: [
+      { label: "Team of 7", tone: "secondary" },
+      { label: "Fintech", tone: "accent" },
+    ],
+    description:
+      "Finances for content creators: income, country taxes and collaborator payouts.",
+    architecture: "React SPA + Spring Boot REST API · Axios service layer · Context",
+    role: "I built the charts dashboard, the payments section and profile editing.",
+  },
+  g20: {
+    title: "G20 HealthTech",
+    tags: [
+      { label: "Team of 10", tone: "secondary" },
+      { label: "HealthTech", tone: "accent" },
+    ],
+    description: "Medical appointments and telehealth portal for patients and doctors.",
+    architecture: "SPA with route layout · separate frontend and backend",
+    role: "I built login, sign-up, the editable patient profile and connected their dashboard to the API.",
+  },
+  biotasys: {
+    title: "Biotasys",
+    tags: [
+      { label: "Frontend lead", tone: "accent" },
+      { label: "HealthTech · AI", tone: "secondary" },
+    ],
+    description:
+      "Platform for nutritionists and labs: microbiota study management and AI-generated clinical reports.",
+    architecture:
+      "Monorepo · React frontend + NestJS API with TypeORM and PostgreSQL · Python AI engine with Gemini",
+    role: "I led the frontend: I wrote the user stories, broke the work into tasks and guided the developers through implementation and code review.",
+  },
+  kitchenRecipes: {
+    title: "Kitchen Recipes",
+    tags: [
+      { label: "Solo", tone: "accent" },
+      { label: "Firebase", tone: "secondary" },
+    ],
+    description:
+      "Recipe manager: create and edit recipes, search, filter by “cooked before” and star ratings.",
+    architecture: "Atomic Design · custom hooks for logic · service layer over Firestore",
+  },
+};
 
 export const en: Dictionary = {
   metadata: {
@@ -104,5 +189,19 @@ export const en: Dictionary = {
         description: "Migrated client apps from Vue.js to React.js, with CI/CD.",
       },
     },
+  },
+  projects: {
+    eyebrow: "Selected work",
+    title: "Projects and architecture",
+    description: "Hover or tap “See architecture” on each project to see how it is built and what I did.",
+    showArchitecture: "See architecture ↑",
+    hideArchitecture: "Hide ↓",
+    moreProjects: "More projects:",
+    detailLabels: {
+      architecture: "Architecture",
+      stack: "Stack",
+      quality: "Quality",
+    },
+    items: enProjectItems,
   },
 };

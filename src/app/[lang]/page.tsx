@@ -2,6 +2,7 @@ import { About } from "@/components/organisms/About";
 import { Experience } from "@/components/organisms/Experience";
 import { Hero } from "@/components/organisms/Hero";
 import { Navbar } from "@/components/organisms/Navbar";
+import { Projects } from "@/components/organisms/Projects";
 import { StatsStrip } from "@/components/organisms/StatsStrip";
 import { getDictionary, getLocale } from "@/content/get-dictionary";
 
@@ -20,6 +21,7 @@ export default async function Home() {
         <StatsStrip stats={dictionary.stats} />
         <About content={dictionary.about} />
         <Experience content={dictionary.experience} />
+        <Projects content={dictionary.projects} />
       </main>
     </>
   );

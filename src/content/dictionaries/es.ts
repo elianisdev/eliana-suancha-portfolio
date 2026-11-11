@@ -1,5 +1,90 @@
 import { esTerminal } from "@/content/terminal/es";
 import type { ExperienceId, ExperienceTranslation } from "@/types/experience";
+import type { ProjectId, ProjectTranslation } from "@/types/project";
+
+const esProjectItems: Record<ProjectId, ProjectTranslation> = {
+  datta: {
+    title: "ATS y sitio comercial · Datta",
+    tags: [
+      { label: "Experiencia profesional", tone: "accent" },
+      { label: "Código privado", tone: "secondary" },
+    ],
+    description:
+      "Plataforma de reclutamiento para empresas, reclutadores y candidatos. En el ATS construí 5 módulos completos: contrataciones, correos y plantillas, acciones automatizadas y el panel de reclutadores freelance. La landing del sitio comercial la desarrollé de principio a fin.",
+    architecture: "Clean Architecture por capas · Service → Use Case → Mapper",
+    highlights: [
+      "Landing completa con Next.js: páginas de producto, agendamiento con cal.com y captura de leads.",
+      "Compositor de correos con variables dinámicas y plantillas reutilizables.",
+      "Integración de Gmail con Google OAuth.",
+      "Componente del design system adoptado en 19 componentes existentes.",
+    ],
+  },
+  konfex: {
+    title: "Konfex",
+    tags: [
+      { label: "Equipo de 8", tone: "secondary" },
+      { label: "Cliente real", tone: "accent" },
+    ],
+    description:
+      "Gestión para un taller de indumentaria: pedidos, costos, presupuestos y chat con clientes por Telegram.",
+    architecture:
+      "Monorepo · frontend Next.js + API Node con Prisma · tiempo real con Socket.io",
+    role: "Rediseñé la calculadora de costos desde Figma e integré el estado leído / no leído del chat.",
+  },
+  identity: {
+    title: "Validación de identidad",
+    tags: [
+      { label: "Individual", tone: "accent" },
+      { label: "Demo en vivo", tone: "secondary" },
+    ],
+    description:
+      "Captura en vivo de cédula y selfie en el navegador, con veredicto al instante.",
+    architecture: "Páginas · componentes · hooks · servicios",
+  },
+  youCreate: {
+    title: "YouCreate",
+    tags: [
+      { label: "Equipo de 7", tone: "secondary" },
+      { label: "Fintech", tone: "accent" },
+    ],
+    description:
+      "Finanzas para creadores de contenido: ingresos, impuestos por país y pagos a colaboradores.",
+    architecture: "SPA React + API REST Spring Boot · capa de servicios con Axios · Context",
+    role: "Construí el dashboard con gráficas, la sección de pagos y la edición de perfil.",
+  },
+  g20: {
+    title: "G20 HealthTech",
+    tags: [
+      { label: "Equipo de 10", tone: "secondary" },
+      { label: "HealthTech", tone: "accent" },
+    ],
+    description: "Portal de citas médicas y teleasistencia para pacientes y médicos.",
+    architecture: "SPA con layout de rutas · frontend y backend separados",
+    role: "Hice login, registro, perfil editable del paciente y la conexión de su dashboard con la API.",
+  },
+  biotasys: {
+    title: "Biotasys",
+    tags: [
+      { label: "Líder frontend", tone: "accent" },
+      { label: "HealthTech · IA", tone: "secondary" },
+    ],
+    description:
+      "Plataforma para nutricionistas y laboratorios: gestión de estudios de microbiota e informes clínicos generados con IA.",
+    architecture:
+      "Monorepo · frontend React + API NestJS con TypeORM y PostgreSQL · motor de IA en Python con Gemini",
+    role: "Lideré el frontend: escribí las historias de usuario, dividí el trabajo en tareas y guié a los desarrolladores en la implementación y la revisión del código.",
+  },
+  kitchenRecipes: {
+    title: "Kitchen Recipes",
+    tags: [
+      { label: "Individual", tone: "accent" },
+      { label: "Firebase", tone: "secondary" },
+    ],
+    description:
+      "Gestor de recetas: crear y editar recetas, búsqueda, filtro por «cocinada antes» y calificación con estrellas.",
+    architecture: "Atomic Design · hooks personalizados para la lógica · capa de servicios sobre Firestore",
+  },
+};
 
 export const es = {
   metadata: {
@@ -104,5 +189,19 @@ export const es = {
         description: "Migración de aplicaciones de clientes de Vue.js a React.js, con CI/CD.",
       },
     } satisfies Record<ExperienceId, ExperienceTranslation>,
+  },
+  projects: {
+    eyebrow: "Trabajo seleccionado",
+    title: "Proyectos y arquitectura",
+    description: "Pasa el cursor o toca «Ver arquitectura» en cada proyecto para ver cómo está construido y qué hice yo.",
+    showArchitecture: "Ver arquitectura ↑",
+    hideArchitecture: "Ocultar ↓",
+    moreProjects: "Más proyectos:",
+    detailLabels: {
+      architecture: "Arquitectura",
+      stack: "Stack",
+      quality: "Calidad",
+    },
+    items: esProjectItems,
   },
 };

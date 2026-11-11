@@ -13,6 +13,9 @@
   --color-syntax-attribute: #a9b8ff;
 
   --container-page: 73.75rem;
+
+  --text-2xs: 0.625rem;
+  --text-2xs--line-height: 1.4;
 }
 
 @theme inline {
