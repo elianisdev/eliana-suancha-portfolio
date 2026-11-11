@@ -1,5 +1,7 @@
 export const fullName = "Eliana Suancha Guzmán";
 
+export const siteUrl = "https://eliana-suancha-dev.vercel.app";
+
 export const profileLinks = {
   email: "elianitasuanguz@gmail.com",
   linkedin: "https://www.linkedin.com/in/elianaguz",
