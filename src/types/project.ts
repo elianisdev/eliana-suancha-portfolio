@@ -27,6 +27,7 @@ export type ProjectTag = {
 
 export type ProjectTranslation = {
   title: string;
+  imageAlt: string;
   tags: ProjectTag[];
   description: string;
   architecture: string;

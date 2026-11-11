@@ -3,6 +3,7 @@ import type { ProjectSize } from "@/types/project";
 
 type ProjectScreenshotProps = {
   image: StaticImageData;
+  alt: string;
   size: ProjectSize;
 };
 
@@ -13,11 +14,11 @@ const sizesByProjectSize: Record<ProjectSize, string> = {
   regular: "(min-width: 1024px) 380px, (min-width: 640px) 50vw, 100vw",
 };
 
-export function ProjectScreenshot({ image, size }: ProjectScreenshotProps) {
+export function ProjectScreenshot({ image, alt, size }: ProjectScreenshotProps) {
   return (
     <Image
       src={image}
-      alt=""
+      alt={alt}
       fill
       placeholder="blur"
       quality={SCREENSHOT_QUALITY}

@@ -5,6 +5,7 @@ import type { InProgressProjectTranslation, ProjectId, ProjectTranslation } from
 const enProjectItems: Record<ProjectId, ProjectTranslation> = {
   datta: {
     title: "ATS and marketing site · Datta",
+    imageAlt: "Screenshot of the Datta ATS: list of active jobs with applicants, filters and the team assigned to each search",
     tags: [
       { label: "Professional work", tone: "accent" },
       { label: "Private code", tone: "secondary" },
@@ -21,6 +22,7 @@ const enProjectItems: Record<ProjectId, ProjectTranslation> = {
   },
   konfex: {
     title: "Konfex",
+    imageAlt: "Screenshot of Konfex: inbox of customer messages from Telegram, with read and unread filters",
     tags: [
       { label: "Team of 8", tone: "secondary" },
       { label: "Real client", tone: "accent" },
@@ -33,6 +35,7 @@ const enProjectItems: Record<ProjectId, ProjectTranslation> = {
   },
   identity: {
     title: "Identity verification",
+    imageAlt: "Screenshot of the identity validation: step 1 of 3, front photo of the ID card taken live with the camera",
     tags: [
       { label: "Solo", tone: "accent" },
       { label: "Live demo", tone: "secondary" },
@@ -40,9 +43,11 @@ const enProjectItems: Record<ProjectId, ProjectTranslation> = {
     description:
       "Live capture of an ID card and a selfie in the browser, with an instant verdict.",
     architecture: "Pages · components · hooks · services",
+    role: "I built the whole flow: camera access with the MediaDevices API, a guided 3-step capture and deployment on Vercel.",
   },
   youCreate: {
     title: "YouCreate",
+    imageAlt: "Screenshot of the YouCreate dashboard: charts of income, expenses, monthly balance and latest transactions",
     tags: [
       { label: "Team of 7", tone: "secondary" },
       { label: "Fintech", tone: "accent" },
@@ -54,6 +59,7 @@ const enProjectItems: Record<ProjectId, ProjectTranslation> = {
   },
   g20: {
     title: "G20 HealthTech",
+    imageAlt: "Screenshot of Medic App: medical appointments calendar and a card with the next appointment",
     tags: [
       { label: "Team of 10", tone: "secondary" },
       { label: "HealthTech", tone: "accent" },
@@ -64,6 +70,7 @@ const enProjectItems: Record<ProjectId, ProjectTranslation> = {
   },
   biotasys: {
     title: "Biotasys",
+    imageAlt: "Screenshot of Biotasys: gut microbiota report with the overall status and diversity indicators",
     tags: [
       { label: "Frontend lead", tone: "accent" },
       { label: "HealthTech · AI", tone: "secondary" },
@@ -76,6 +83,7 @@ const enProjectItems: Record<ProjectId, ProjectTranslation> = {
   },
   kitchenRecipes: {
     title: "Kitchen Recipes",
+    imageAlt: "Screenshot of Kitchen Recipes: recipe list with search, filter and star ratings",
     tags: [
       { label: "Solo", tone: "accent" },
       { label: "Firebase", tone: "secondary" },
@@ -83,6 +91,7 @@ const enProjectItems: Record<ProjectId, ProjectTranslation> = {
     description:
       "Recipe manager: create and edit recipes, search, filter by “cooked before” and star ratings.",
     architecture: "Atomic Design · custom hooks for logic · service layer over Firestore",
+    role: "I built the whole app: Atomic Design components, custom hooks and the service layer on top of Firestore.",
   },
 };
 
