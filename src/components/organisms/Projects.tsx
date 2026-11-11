@@ -24,8 +24,10 @@ export function Projects({ content }: ProjectsProps) {
 
         <div className="grid gap-4.5 sm:grid-cols-2 lg:grid-cols-6">
           {projects.map((project) => {
-            const preview = <ProjectScreenshot image={project.image} size={project.size} />;
             const projectContent = content.items[project.id];
+            const preview = (
+              <ProjectScreenshot image={project.image} alt={projectContent.imageAlt} size={project.size} />
+            );
 
             if (project.size === "featured") {
               return (

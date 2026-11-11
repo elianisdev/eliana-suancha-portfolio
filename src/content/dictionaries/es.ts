@@ -7,6 +7,7 @@ import type { InProgressProjectTranslation, ProjectId, ProjectTranslation } from
 const esProjectItems: Record<ProjectId, ProjectTranslation> = {
   datta: {
     title: "ATS y sitio comercial · Datta",
+    imageAlt: "Captura del ATS de Datta: lista de vacantes activas con postulantes, filtros y el equipo asignado a cada búsqueda",
     tags: [
       { label: "Experiencia profesional", tone: "accent" },
       { label: "Código privado", tone: "secondary" },
@@ -23,6 +24,7 @@ const esProjectItems: Record<ProjectId, ProjectTranslation> = {
   },
   konfex: {
     title: "Konfex",
+    imageAlt: "Captura de Konfex: bandeja de mensajes de clientes desde Telegram, con filtros de leídos y no leídos",
     tags: [
       { label: "Equipo de 8", tone: "secondary" },
       { label: "Cliente real", tone: "accent" },
@@ -35,6 +37,7 @@ const esProjectItems: Record<ProjectId, ProjectTranslation> = {
   },
   identity: {
     title: "Validación de identidad",
+    imageAlt: "Captura de la validación de identidad: paso 1 de 3, foto frontal de la cédula tomada en vivo con la cámara",
     tags: [
       { label: "Individual", tone: "accent" },
       { label: "Demo en vivo", tone: "secondary" },
@@ -42,9 +45,11 @@ const esProjectItems: Record<ProjectId, ProjectTranslation> = {
     description:
       "Captura en vivo de cédula y selfie en el navegador, con veredicto al instante.",
     architecture: "Páginas · componentes · hooks · servicios",
+    role: "Desarrollé todo el flujo: acceso a la cámara con la MediaDevices API, captura guiada en 3 pasos y despliegue en Vercel.",
   },
   youCreate: {
     title: "YouCreate",
+    imageAlt: "Captura del dashboard de YouCreate: gráficos de ingresos, egresos, balance mensual y últimos movimientos",
     tags: [
       { label: "Equipo de 7", tone: "secondary" },
       { label: "Fintech", tone: "accent" },
@@ -56,6 +61,7 @@ const esProjectItems: Record<ProjectId, ProjectTranslation> = {
   },
   g20: {
     title: "G20 HealthTech",
+    imageAlt: "Captura de Medic App: calendario de citas médicas y tarjeta con la próxima cita",
     tags: [
       { label: "Equipo de 10", tone: "secondary" },
       { label: "HealthTech", tone: "accent" },
@@ -66,6 +72,7 @@ const esProjectItems: Record<ProjectId, ProjectTranslation> = {
   },
   biotasys: {
     title: "Biotasys",
+    imageAlt: "Captura de Biotasys: informe de microbiota intestinal con el estado general y los indicadores de diversidad",
     tags: [
       { label: "Líder frontend", tone: "accent" },
       { label: "HealthTech · IA", tone: "secondary" },
@@ -78,6 +85,7 @@ const esProjectItems: Record<ProjectId, ProjectTranslation> = {
   },
   kitchenRecipes: {
     title: "Kitchen Recipes",
+    imageAlt: "Captura de Kitchen Recipes: lista de recetas con buscador, filtro y calificación con estrellas",
     tags: [
       { label: "Individual", tone: "accent" },
       { label: "Firebase", tone: "secondary" },
@@ -85,6 +93,7 @@ const esProjectItems: Record<ProjectId, ProjectTranslation> = {
     description:
       "Gestor de recetas: crear y editar recetas, búsqueda, filtro por «cocinada antes» y calificación con estrellas.",
     architecture: "Atomic Design · hooks personalizados para la lógica · capa de servicios sobre Firestore",
+    role: "Desarrollé la app completa: componentes con Atomic Design, hooks personalizados y la capa de servicios sobre Firestore.",
   },
 };
 
