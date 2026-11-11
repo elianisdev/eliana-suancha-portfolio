@@ -5,7 +5,7 @@ import identityCapture from "@/assets/images/projects/identity-capture.png";
 import kitchenRecipes from "@/assets/images/projects/kitchen-recipes.png";
 import konfexInbox from "@/assets/images/projects/konfex-inbox.png";
 import youCreateDashboard from "@/assets/images/projects/youcreate-dashboard.png";
-import type { MoreProject, Project } from "@/types/project";
+import type { InProgressProject, MoreProject, Project } from "@/types/project";
 
 export const projects: Project[] = [
   {
@@ -59,6 +59,11 @@ export const projects: Project[] = [
     links: [{ kind: "repo", href: "https://github.com/elianisdev/kitchen-recipes" }],
   },
 ];
+
+export const inProgressProject: InProgressProject = {
+  stack: "Next.js · TypeScript · Prisma · PostgreSQL · Gemini API · GitHub Actions",
+  links: [{ kind: "repo", href: "https://github.com/elianisdev/devflow-ai" }],
+};
 
 export const moreProjects: MoreProject[] = [
   {

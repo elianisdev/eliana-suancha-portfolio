@@ -2,7 +2,7 @@ import { esTerminal } from "@/content/terminal/es";
 import type { ArchitecturePatternId, ArchitecturePatternTranslation, SkillGroupId } from "@/types/architecture";
 import type { CertificationId } from "@/types/certification";
 import type { ExperienceId, ExperienceTranslation } from "@/types/experience";
-import type { ProjectId, ProjectTranslation } from "@/types/project";
+import type { InProgressProjectTranslation, ProjectId, ProjectTranslation } from "@/types/project";
 
 const esProjectItems: Record<ProjectId, ProjectTranslation> = {
   datta: {
@@ -86,6 +86,39 @@ const esProjectItems: Record<ProjectId, ProjectTranslation> = {
       "Gestor de recetas: crear y editar recetas, búsqueda, filtro por «cocinada antes» y calificación con estrellas.",
     architecture: "Atomic Design · hooks personalizados para la lógica · capa de servicios sobre Firestore",
   },
+};
+
+const esInProgressProject: InProgressProjectTranslation = {
+  status: "En construcción",
+  title: "DevFlow AI",
+  description:
+    "Tablero para equipos de desarrollo donde cada tarea se conecta con su PR y agentes de IA revisan el código, proponen tests y redactan la documentación.",
+  architecture: "Next.js App Router · Clean Architecture · agentes de IA como puertos del dominio · servidor MCP",
+  board: [
+    {
+      title: "Por hacer",
+      tasks: [
+        { title: "Login con GitHub", reference: "DEV-12" },
+        { title: "Filtros", reference: "DEV-15" },
+      ],
+    },
+    {
+      title: "Revisión",
+      tasks: [
+        {
+          title: "API de tareas",
+          reference: "PR #31",
+          review: { label: "IA · 2 cambios", tone: "secondary" },
+        },
+      ],
+    },
+    {
+      title: "Hecho",
+      tasks: [
+        { title: "Layout", reference: "PR #24", review: { label: "IA · aprobado", tone: "accent" } },
+      ],
+    },
+  ],
 };
 
 export const es = {
@@ -205,6 +238,7 @@ export const es = {
       quality: "Calidad",
     },
     items: esProjectItems,
+    inProgress: esInProgressProject,
   },
   howIBuild: {
     eyebrow: "Cómo construyo",

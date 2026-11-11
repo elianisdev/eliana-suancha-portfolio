@@ -1,9 +1,10 @@
 import { FeaturedProjectCard } from "@/components/molecules/FeaturedProjectCard";
+import { InProgressProjectCard } from "@/components/molecules/InProgressProjectCard";
 import { ProjectCard } from "@/components/molecules/ProjectCard";
 import { ProjectScreenshot } from "@/components/molecules/ProjectScreenshot";
 import { SectionHeader } from "@/components/molecules/SectionHeader";
 import { sectionIds } from "@/content/profile";
-import { moreProjects, projects } from "@/content/projects";
+import { inProgressProject, moreProjects, projects } from "@/content/projects";
 import type { Dictionary } from "@/types/dictionary";
 
 type ProjectsContent = Dictionary["projects"];
@@ -50,6 +51,11 @@ export function Projects({ content }: ProjectsProps) {
               />
             );
           })}
+          <InProgressProjectCard
+            project={inProgressProject}
+            content={content.inProgress}
+            detailLabels={content.detailLabels}
+          />
         </div>
 
         <div className="mt-5.5 flex flex-wrap items-center gap-2.5 text-sm text-muted">
