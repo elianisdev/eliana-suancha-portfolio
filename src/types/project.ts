@@ -40,6 +40,24 @@ export type ProjectDetailLabels = {
   quality: string;
 };
 
+export type InProgressProject = Pick<Project, "stack" | "links">;
+
+export type BoardTask = {
+  title: string;
+  reference: string;
+  review?: ProjectTag;
+};
+
+export type BoardColumn = {
+  title: string;
+  tasks: BoardTask[];
+};
+
+export type InProgressProjectTranslation = Pick<ProjectTranslation, "title" | "description" | "architecture"> & {
+  status: string;
+  board: BoardColumn[];
+};
+
 export type MoreProject = {
   name: string;
   href: string;

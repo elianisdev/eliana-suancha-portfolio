@@ -1,6 +1,6 @@
 import { enTerminal } from "@/content/terminal/en";
 import type { Dictionary } from "@/types/dictionary";
-import type { ProjectId, ProjectTranslation } from "@/types/project";
+import type { InProgressProjectTranslation, ProjectId, ProjectTranslation } from "@/types/project";
 
 const enProjectItems: Record<ProjectId, ProjectTranslation> = {
   datta: {
@@ -84,6 +84,39 @@ const enProjectItems: Record<ProjectId, ProjectTranslation> = {
       "Recipe manager: create and edit recipes, search, filter by “cooked before” and star ratings.",
     architecture: "Atomic Design · custom hooks for logic · service layer over Firestore",
   },
+};
+
+const enInProgressProject: InProgressProjectTranslation = {
+  status: "In progress",
+  title: "DevFlow AI",
+  description:
+    "A board for development teams where every task is linked to its PR and AI agents review the code, suggest tests and draft the docs.",
+  architecture: "Next.js App Router · Clean Architecture · AI agents as domain ports · MCP server",
+  board: [
+    {
+      title: "To do",
+      tasks: [
+        { title: "Sign in with GitHub", reference: "DEV-12" },
+        { title: "Filters", reference: "DEV-15" },
+      ],
+    },
+    {
+      title: "In review",
+      tasks: [
+        {
+          title: "Tasks API",
+          reference: "PR #31",
+          review: { label: "AI · 2 changes", tone: "secondary" },
+        },
+      ],
+    },
+    {
+      title: "Done",
+      tasks: [
+        { title: "Layout", reference: "PR #24", review: { label: "AI · approved", tone: "accent" } },
+      ],
+    },
+  ],
 };
 
 export const en: Dictionary = {
@@ -203,6 +236,7 @@ export const en: Dictionary = {
       quality: "Quality",
     },
     items: enProjectItems,
+    inProgress: enInProgressProject,
   },
   howIBuild: {
     eyebrow: "How I build",
