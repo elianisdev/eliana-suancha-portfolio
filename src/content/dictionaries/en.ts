@@ -195,7 +195,7 @@ export const en: Dictionary = {
   },
   experience: {
     eyebrow: "Experience",
-    title: "Where I've built",
+    title: "Where I've worked",
     description:
       "Six teams, four industries and one focus: maintainable interfaces that reach production.",
     sectors: ["HR · ATS", "Banking", "Automotive", "Digital services"],
@@ -252,7 +252,7 @@ export const en: Dictionary = {
   },
   howIBuild: {
     eyebrow: "How I build",
-    title: "Architecture before components",
+    title: "How I organize code",
     description:
       "Two patterns I use in production: Clean Architecture to organize data and logic, and Atomic Design to build the interface.",
     patterns: {
