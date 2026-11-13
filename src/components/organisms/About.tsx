@@ -21,14 +21,9 @@ export function About({ content }: AboutProps) {
             titleHighlight={content.titleHighlight}
             description={content.description}
           />
-          <ol className="mt-6.5 grid gap-3">
-            {content.steps.map((step, index) => (
-              <ProcessStep
-                key={step.title}
-                number={index + 1}
-                title={step.title}
-                description={step.description}
-              />
+          <ol className="relative mt-8 before:absolute before:top-3 before:bottom-3 before:left-1.25 before:w-px before:bg-line">
+            {content.steps.map((step) => (
+              <ProcessStep key={step.title} title={step.title} description={step.description} />
             ))}
           </ol>
         </div>
