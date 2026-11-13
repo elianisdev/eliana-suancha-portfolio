@@ -15,7 +15,10 @@ export function HeroBackdrop() {
 
   return (
     <div ref={containerRef} aria-hidden="true" className="pointer-events-none absolute inset-0">
-      <canvas ref={canvasRef} className="absolute inset-0 size-full opacity-55" />
+      <canvas
+        ref={canvasRef}
+        className="absolute inset-0 size-full opacity-55 [mask-image:radial-gradient(ellipse_42%_58%_at_30%_50%,transparent_25%,black_85%)]"
+      />
       <motion.div
         style={{ left: glow.x, top: glow.y, opacity: glow.opacity }}
         className="absolute size-130 -translate-1/2 rounded-full bg-radial from-accent/16 to-transparent to-65%"
