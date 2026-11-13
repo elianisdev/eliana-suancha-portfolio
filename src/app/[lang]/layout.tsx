@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
-import { Inter, JetBrains_Mono, Plus_Jakarta_Sans } from "next/font/google";
+import { Bricolage_Grotesque, Inter, JetBrains_Mono } from "next/font/google";
 import { getDictionary, getLocale } from "@/content/get-dictionary";
 import { fullName, siteUrl } from "@/content/profile";
 import { defaultLocale, locales, type Locale } from "@/lib/i18n";
 import "../globals.css";
 
-const plusJakartaSans = Plus_Jakarta_Sans({
-  variable: "--font-plus-jakarta-sans",
+const bricolageGrotesque = Bricolage_Grotesque({
+  variable: "--font-bricolage-grotesque",
   subsets: ["latin"],
   weight: ["500", "600", "700", "800"],
 });
@@ -63,7 +63,7 @@ export default async function RootLayout({ children }: LayoutProps<"/[lang]">) {
   return (
     <html
       lang={locale}
-      className={`${plusJakartaSans.variable} ${inter.variable} ${jetBrainsMono.variable} h-full scroll-pt-16 scroll-smooth scheme-dark antialiased motion-reduce:scroll-auto`}
+      className={`${bricolageGrotesque.variable} ${inter.variable} ${jetBrainsMono.variable} h-full scroll-pt-16 scroll-smooth scheme-dark antialiased motion-reduce:scroll-auto`}
     >
       <body className="min-h-full flex flex-col bg-ink font-sans text-fg">
         {children}
