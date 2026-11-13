@@ -197,7 +197,7 @@ export const es = {
   },
   experience: {
     eyebrow: "Experiencia",
-    title: "Dónde he construido",
+    title: "Dónde he trabajado",
     description:
       "Seis equipos, cuatro sectores y el mismo foco: interfaces mantenibles que llegan a producción.",
     sectors: ["RR.HH. · ATS", "Banca", "Automotriz", "Servicios digitales"],
@@ -254,7 +254,7 @@ export const es = {
   },
   howIBuild: {
     eyebrow: "Cómo construyo",
-    title: "Arquitectura antes que componentes",
+    title: "Cómo organizo el código",
     description:
       "Dos patrones que aplico en producción: Clean Architecture para organizar los datos y la lógica, y Atomic Design para construir la interfaz.",
     patterns: {
