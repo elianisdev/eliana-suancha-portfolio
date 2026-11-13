@@ -12,7 +12,7 @@ export function Logo({ href }: LogoProps) {
     >
       <span
         aria-hidden="true"
-        className="grid size-8 place-items-center rounded-lg bg-linear-135 from-accent to-accent-2 text-xs font-extrabold text-ink"
+        className="grid size-8 place-items-center rounded-lg bg-accent text-xs font-extrabold text-ink"
       >
         ESG
       </span>

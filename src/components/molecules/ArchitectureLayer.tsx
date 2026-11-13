@@ -19,7 +19,7 @@ function LayerMarkerIcon({ marker, position }: { marker: LayerMarker; position: 
 
   return (
     <span
-      className={`rounded-full bg-linear-135 from-accent to-accent-2 ${dotSizeClassNames[position]}`}
+      className={`rounded-full bg-accent ${dotSizeClassNames[position]}`}
     />
   );
 }

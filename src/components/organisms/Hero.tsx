@@ -1,5 +1,5 @@
 import { ButtonLink } from "@/components/atoms/ButtonLink";
-import { GradientText } from "@/components/atoms/GradientText";
+import { HighlightText } from "@/components/atoms/HighlightText";
 import { StatusPill } from "@/components/atoms/StatusPill";
 import { HeroBackdrop } from "@/components/organisms/HeroBackdrop";
 import { Terminal } from "@/components/organisms/Terminal";
@@ -20,7 +20,7 @@ export function Hero({ content, terminal }: HeroProps) {
           <StatusPill>{content.status}</StatusPill>
           <p className="mt-6 font-mono text-muted">{content.greeting}</p>
           <h1 className="mt-2 font-display text-4xl leading-tight font-extrabold tracking-tight text-balance sm:text-5xl lg:text-6xl">
-            {content.titleStart} <GradientText>{content.titleHighlight}</GradientText>
+            {content.titleStart} <HighlightText>{content.titleHighlight}</HighlightText>
           </h1>
           <p className="mt-5 max-w-xl text-lg text-muted">{content.lead}</p>
           <div className="mt-7 flex flex-wrap gap-3">
