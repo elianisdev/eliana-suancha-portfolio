@@ -34,7 +34,7 @@ export function ArchitectureDetails({
     >
       {rows.map(({ term, detail }) => (
         <div key={term} className="contents">
-          <dt className="pt-0.5 font-mono text-2xs tracking-wider text-accent uppercase">{term}</dt>
+          <dt className="text-xs font-semibold text-accent">{term}</dt>
           <dd className="min-w-0">{detail}</dd>
         </div>
       ))}

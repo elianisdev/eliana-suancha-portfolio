@@ -8,8 +8,8 @@ type Dot = {
 
 const DOT_SPACING = 34;
 const DOT_OFFSET = 20;
-const DOT_SIZE = 1.6;
-const STATIC_OPACITY = 0.25;
+const DOT_SIZE = 1.8;
+const STATIC_OPACITY = 0.3;
 
 const createDots = (width: number, height: number): Dot[] => {
   const dots: Dot[] = [];
@@ -22,7 +22,7 @@ const createDots = (width: number, height: number): Dot[] => {
 };
 
 const getDotOpacity = (dot: Dot, time: number) =>
-  0.12 + (0.18 * (1 + Math.sin(time / 1400 + dot.phase + dot.x / 180))) / 2;
+  0.12 + (0.4 * (1 + Math.sin(time / 1400 + dot.phase + dot.x / 180))) / 2;
 
 export function useDotGrid(
   canvasRef: RefObject<HTMLCanvasElement | null>,
@@ -33,7 +33,7 @@ export function useDotGrid(
     const context = canvas?.getContext("2d");
     if (!canvas || !context) return;
 
-    const color = getComputedStyle(canvas).getPropertyValue("--color-accent").trim();
+    const color = getComputedStyle(canvas).getPropertyValue("--color-fg").trim();
     let dots: Dot[] = [];
     let width = 0;
     let height = 0;

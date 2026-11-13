@@ -11,7 +11,7 @@ export function Portrait({ image, alt, caption }: PortraitProps) {
     <figure className="relative w-full max-w-80 justify-self-center lg:max-w-100">
       <div
         aria-hidden="true"
-        className="absolute inset-0 translate-4.5 rounded-3xl bg-linear-135 from-accent to-accent-2 opacity-85"
+        className="absolute inset-0 translate-3 rounded-3xl bg-accent opacity-35"
       />
       <Image
         src={image}
