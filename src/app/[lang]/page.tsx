@@ -8,6 +8,7 @@ import { HowIBuild } from "@/components/organisms/HowIBuild";
 import { Navbar } from "@/components/organisms/Navbar";
 import { Projects } from "@/components/organisms/Projects";
 import { StatsStrip } from "@/components/organisms/StatsStrip";
+import { Testimonials } from "@/components/organisms/Testimonials";
 import { getDictionary, getLocale } from "@/content/get-dictionary";
 
 export default async function Home() {
@@ -26,6 +27,7 @@ export default async function Home() {
         <About content={dictionary.about} />
         <Experience content={dictionary.experience} />
         <Projects content={dictionary.projects} />
+        <Testimonials content={dictionary.testimonials} />
         <HowIBuild content={dictionary.howIBuild} />
         <Certifications content={dictionary.certifications} locale={locale} />
         <Contact content={dictionary.contact} />

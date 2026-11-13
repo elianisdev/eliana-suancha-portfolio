@@ -1,6 +1,7 @@
 import { enTerminal } from "@/content/terminal/en";
 import type { Dictionary } from "@/types/dictionary";
 import type { InProgressProjectTranslation, ProjectId, ProjectTranslation } from "@/types/project";
+import type { TestimonialId } from "@/types/testimonial";
 
 const enProjectItems: Record<ProjectId, ProjectTranslation> = {
   datta: {
@@ -31,7 +32,8 @@ const enProjectItems: Record<ProjectId, ProjectTranslation> = {
       "Management for a clothing workshop: orders, costs, quotes and customer chat over Telegram.",
     architecture:
       "Monorepo · Next.js frontend + Node API with Prisma · real time with Socket.io",
-    role: "I redesigned the cost calculator from Figma and wired the chat's read / unread state.",
+    role:
+      "I advocated a mobile-first architecture over a native app, redesigned the cost calculator from Figma and integrated Telegram messaging with WebSockets, including the server side.",
   },
   identity: {
     title: "Identity verification",
@@ -289,6 +291,23 @@ export const en: Dictionary = {
       ai: "AI in development",
       alsoWith: "I also work with",
     },
+  },
+  testimonials: {
+    eyebrow: "Recommendations",
+    title: "What people say about my work",
+    description:
+      "Leads and teammates I've worked with, from their recommendations on LinkedIn (translated from Spanish).",
+    viewAll: "See all on LinkedIn ↗",
+    items: {
+      ronil:
+        "She has great attention to detail and the ability to turn Figma designs into frontend code. She works very well with backend, Product and Design teams.",
+      magdiel:
+        "She stood out for her technical judgment and her ability to defend architecture decisions, clearly explaining the why.",
+      daniela:
+        "Beyond her flawless technical execution on the frontend, what truly sets Eliana apart is her strategic judgment.",
+      mariaLujan:
+        "She stood out from the very beginning for her ability to guide and support the team, always with a positive attitude.",
+    } satisfies Record<TestimonialId, string>,
   },
   certifications: {
     eyebrow: "Learning",

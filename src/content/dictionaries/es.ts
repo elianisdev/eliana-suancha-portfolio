@@ -3,6 +3,7 @@ import type { ArchitecturePatternId, ArchitecturePatternTranslation, SkillGroupI
 import type { CertificationId } from "@/types/certification";
 import type { ExperienceId, ExperienceTranslation } from "@/types/experience";
 import type { InProgressProjectTranslation, ProjectId, ProjectTranslation } from "@/types/project";
+import type { TestimonialId } from "@/types/testimonial";
 
 const esProjectItems: Record<ProjectId, ProjectTranslation> = {
   datta: {
@@ -33,7 +34,8 @@ const esProjectItems: Record<ProjectId, ProjectTranslation> = {
       "Gestión para un taller de indumentaria: pedidos, costos, presupuestos y chat con clientes por Telegram.",
     architecture:
       "Monorepo · frontend Next.js + API Node con Prisma · tiempo real con Socket.io",
-    role: "Rediseñé la calculadora de costos desde Figma e integré el estado leído / no leído del chat.",
+    role:
+      "Defendí la arquitectura mobile-first frente a una app nativa, rediseñé la calculadora de costos desde Figma e integré la mensajería de Telegram con WebSockets, también del lado del servidor.",
   },
   identity: {
     title: "Validación de identidad",
@@ -291,6 +293,23 @@ export const es = {
       ai: "IA en el desarrollo",
       alsoWith: "También trabajo con",
     } satisfies Record<SkillGroupId, string>,
+  },
+  testimonials: {
+    eyebrow: "Recomendaciones",
+    title: "Lo que dicen de mi trabajo",
+    description:
+      "Líderes y compañeros con quienes he trabajado, en sus recomendaciones publicadas en LinkedIn.",
+    viewAll: "Ver todas en LinkedIn ↗",
+    items: {
+      ronil:
+        "Tiene buena atención al detalle y capacidad para traducir diseños en Figma a código frontend. Trabaja muy bien con equipos backend, Producto y Diseño.",
+      magdiel:
+        "Se destacó por su criterio técnico y su capacidad para defender decisiones de arquitectura, explicando con claridad el porqué.",
+      daniela:
+        "Más allá de su impecable ejecución técnica en el frontend, lo que realmente diferencia a Eliana es su criterio estratégico.",
+      mariaLujan:
+        "Se destacó desde el primer momento por su capacidad para guiar y acompañar al equipo, siempre con una actitud positiva.",
+    } satisfies Record<TestimonialId, string>,
   },
   certifications: {
     eyebrow: "Formación",
