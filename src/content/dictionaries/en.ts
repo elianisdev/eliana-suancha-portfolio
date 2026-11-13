@@ -306,7 +306,7 @@ export const en: Dictionary = {
       daniela:
         "Beyond her flawless technical execution on the frontend, what truly sets Eliana apart is her strategic judgment.",
       mariaLujan:
-        "In moments of tension or product conflicts, she held the team together, set priorities and brought calm.",
+        "She stood out from the very beginning for her ability to guide and support the team, always with a positive attitude.",
     } satisfies Record<TestimonialId, string>,
   },
   certifications: {

@@ -308,7 +308,7 @@ export const es = {
       daniela:
         "Más allá de su impecable ejecución técnica en el frontend, lo que realmente diferencia a Eliana es su criterio estratégico.",
       mariaLujan:
-        "En momentos de tensión o conflictos a nivel producto, supo sostener al equipo, ordenar las prioridades y transmitir calma.",
+        "Se destacó desde el primer momento por su capacidad para guiar y acompañar al equipo, siempre con una actitud positiva.",
     } satisfies Record<TestimonialId, string>,
   },
   certifications: {
