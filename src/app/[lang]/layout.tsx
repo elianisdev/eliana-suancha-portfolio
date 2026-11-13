@@ -45,7 +45,7 @@ export async function generateMetadata(): Promise<Metadata> {
       description: metadata.description,
       siteName: fullName,
       locale: openGraphLocales[locale],
-      images: [{ url: "/og-image.png", width: 1200, height: 630, alt: metadata.imageAlt }],
+      images: [{ url: "/og-image.png?v=2", width: 1200, height: 630, alt: metadata.imageAlt }],
     },
     alternates: {
       canonical: `/${locale}`,
